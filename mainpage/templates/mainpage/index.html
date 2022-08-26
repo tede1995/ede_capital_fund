@@ -133,7 +133,7 @@
                     </div>
                     <div class="row">
 						<div class="col single-feature wow fadeInUp" data-wow-delay=".6s">
-							<p class="wow fadeInUp" data-wow-delay=".6s">Growth of AUD $10,000</p></br>
+							<h3 class="wow fadeInUp" data-wow-delay=".6s">Growth of AUD $10,000</h3></br>
 						      <!--<canvas id="perfChart" style="position: relative;height:400px;width:100%;max-width:100%"></canvas>-->
 						      <div class="chart-container">
 						      	<canvas id="perfChart" style="position: relative;height:400px;width:100%;max-width:100%"></canvas>
@@ -396,12 +396,68 @@
                         <p class="wow fadeInUp" data-wow-delay=".6s">There are many variations of passages of Lorem
                             Ipsum available, but the majority have suffered alteration in some form.</p>
                     </div>
-                    <!-- Contact Form Widget -->
-                    <div class="wow fadeInUp" data-wow-delay=".6s">
+
+                    <!-- Contact Form Widget  -->
+                    <!--<div class="wow fadeInUp" data-wow-delay=".6s">
                     	<script src="https://apps.elfsight.com/p/platform.js" defer></script>
 						<div class="elfsight-app-fad95fd9-7e3d-456e-a1bd-ff7ebf3366f3"></div>
-					</div>
-					<!-- Contact Form Widget -->
+					</div>-->
+					<!-- Contact Form Widget End -->
+									    
+					<!-- Start Contact Form Head Area -->
+				    <div class="contact-form-head wow fadeInUp" data-wow-delay=".6s">
+				        <div class="container">
+				            <div class="row align-items-center">
+				                <div class="">
+				                    <div class="form-main">
+				                        <form action="" method="post">
+											{% csrf_token %}
+											{% load widget_tweaks %}
+				                            <div class="row">
+				                                <div class="col-lg-6 col-12 p-2">
+				                                    <div class="form-group">
+				                                        <!--<input class="form-control" name="name" type="text" placeholder="Your Name" required="required" id="id_name">-->
+														{% render_field form.name class="form-control" placeholder="Full Name" type="text" %}
+				                                    </div>
+				                                </div>
+				                                <div class="col-lg-6 col-12 p-2">
+				                                    <div class="form-group">
+				                                        <!--<input class="form-control" name="subject" type="text" placeholder="Subject" required="required" id="id_subject">-->
+				                                        {% render_field form.subject class="form-control" placeholder="Subject" type="text" %}
+				                                    </div>
+				                                </div>
+				                                <div class="col-lg-6 col-12 p-2">
+				                                    <div class="form-group">
+				                                        <!--<input class="form-control" name="email" type="email" placeholder="Email" required="required" id="id_email">-->
+				                                        {% render_field form.email class="form-control" placeholder="Email" type="email" %}
+				                                    </div>
+				                                </div>
+				                                <div class="col-lg-6 col-12 p-2">
+				                                    <div class="form-group">
+				                                        <!--<input class="form-control" name="phone" type="text" placeholder="Phone Number" required="required" id="id_phone">-->
+				                                        {% render_field form.phonenumber class="form-control" placeholder="Phone Number" type="text" %}
+				                                    </div>
+				                                </div>
+				                                <div class="col-12 p-2">
+				                                    <div class="form-group message">
+				                                        <!--<textarea class="form-control" cols="40" rows="5" name="message" placeholder="Message" id="id_message"></textarea>-->
+				                                        {% render_field form.message class="form-control" placeholder="Message" type="text" %}
+				                                    </div>
+				                                </div>
+				                                <div class="col-12 p-2">
+				                                    <div class="form-group button">
+				                                    	<input type="submit" value="Submit" class="btn">
+				                                    </div>
+				                                </div>
+				                            </div>
+				                        </form>
+				                    </div>
+				                </div>
+				            </div>
+				        </div>
+				    </div>
+				    <!-- End Contact Form Head Area -->
+
                 </div>
             </div>
         </div>
@@ -422,7 +478,7 @@
                                 	<img src="https://res.cloudinary.com/cloud-equity/image/upload/v1660889304/logo-new-ede-capital_rf0lce.png" alt="Ede Capital logo">
                             	</a>
                             </div>
-                            <p class="text-muted" style="font-size: 0.7rem;">Ede Capital is a corporate authorised representative of Pulse Markets. This website may contain general financial product advice and does not constitute an offer or inducement to enter into a legally binding contract. It does not form part of the terms and conditions for Pulse Markets products or services. The information provided on this website is not intended as, nor is it a substitute for, personal or institutional financial services advice. As this website has been prepared without consideration of any specific client’s investment objectives, financial situation or needs, a financial advisor should be consulted before any investment decision is made. Readers acting on this information without first consulting an adviser do so entirely at their own risk.</p>
+                            <p class="text-muted" style="font-size: 0.7rem;">Ede Capital is a corporate authorised representative of Point Capital Group AFSL (518031). This website may contain general financial product advice and does not constitute an offer or inducement to enter into a legally binding contract. It does not form part of the terms and conditions for Point Capital Group products or services. The information provided on this website is not intended as, nor is it a substitute for, personal or institutional financial services advice. As this website has been prepared without consideration of any specific client’s investment objectives, financial situation or needs, a financial advisor should be consulted before any investment decision is made. Readers acting on this information without first consulting an adviser do so entirely at their own risk.</p>
                             <ul class="social">
                                 <li><a href="javascript:void(0)"><i class="lni lni-facebook-filled"></i></a></li>
                                 <li><a href="javascript:void(0)"><i class="lni lni-twitter-original"></i></a></li>
@@ -514,6 +570,7 @@
     <script src="{% static 'mainpage/js/glightbox.min.js' %}"></script>
     <script src="{% static 'mainpage/js/count-up.min.js' %}"></script>
     <script src="{% static 'mainpage/js/main.js' %}"></script>
+    <script src="{% static 'mainpage/js/form.js' %}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 
     <!--<script type="text/javascript">

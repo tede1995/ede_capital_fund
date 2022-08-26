@@ -4139,7 +4139,6 @@ blockquote span {
 
 /* Contact Form Head */
 .contact-form-head {
-  background-image: url("https://via.placeholder.com/1440x960");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -4154,7 +4153,7 @@ blockquote span {
   top: 0;
   height: 100%;
   width: 60%;
-  background-color: #4A4E69;
+  background-color: rgba(0, 0, 0, 0.0);
   z-index: -1;
 }
 
