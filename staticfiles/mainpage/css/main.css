@@ -2429,7 +2429,6 @@ ol {
 .chart-container {
   position: relative; 
   height:400px !important;
-  max-width:100% !important;
 }
 
 /*======================================
@@ -3910,6 +3909,8 @@ blockquote span {
 
 .team .single-team .image img {
   width: 100%;
+  height: 260px;
+  object-fit: cover; 
 }
 
 .team .single-team .content {
@@ -4140,7 +4141,6 @@ blockquote span {
 
 /* Contact Form Head */
 .contact-form-head {
-  background-image: url("https://via.placeholder.com/1440x960");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -4155,7 +4155,7 @@ blockquote span {
   top: 0;
   height: 100%;
   width: 60%;
-  background-color: #4A4E69;
+  background-color: rgba(0, 0, 0, 0.0);
   z-index: -1;
 }
 
@@ -4251,7 +4251,7 @@ blockquote span {
 }
 
 .contact-form-head .form-main {
-  padding: 50px 50px;
+  padding: 25px 25px;
   background-color: #fff;
   -webkit-box-shadow: 0px 1px 30px 0px rgba(32, 32, 32, 0.11);
           box-shadow: 0px 1px 30px 0px rgba(32, 32, 32, 0.11);
