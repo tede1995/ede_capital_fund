@@ -3,11 +3,11 @@
 
 <!DOCTYPE html>
 <html class="no-js" lang="zxx">
-
+{% for content in content %}
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Ede Capital</title>
+    <title>{{ content.website_title }}</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="apple-touch-icon" sizes="180x180" href="https://res.cloudinary.com/cloud-equity/image/upload/v1661234993/Favicon/apple-touch-icon_v73njm.png">
@@ -105,8 +105,8 @@
             <div class="row align-items-center">
                 <div class="col-lg-5 col-md-12 col-12">
                     <div class="hero-content">
-                        <h1 class="wow fadeInLeft" data-wow-delay=".4s">Invest with confidence.</h1>
-                        <p class="wow fadeInLeft" data-wow-delay=".6s"> Ede Capital's market experts provide personable and bespoke trading advice; managing and guiding your portfolio for a brighter future. Subscribe to our investment mailing list by submitting your email address below.</p>
+                        <h1 class="wow fadeInLeft" data-wow-delay=".4s">{{ content.homepage_title }}</h1>
+                        <p class="wow fadeInLeft" data-wow-delay=".6s">{{ content.homepage_subtitle }}</p>
                         <div class="button wow fadeInLeft" data-wow-delay=".8s">
                             <a href="#features" class="btn btn-alt"><i class="lni lni-chevron-down"></i> Review Our Performance</a>
                         </div>
@@ -130,14 +130,12 @@
                 <div class="col-12">
                     <div class="section-title">
                         <h3 class="wow zoomIn" data-wow-delay=".2s">Performance</h3>
-                        <h2 class="wow fadeInUp" data-wow-delay=".4s">Your Experience Gets Better And Better Over Time.
-                        </h2>
-                        <p class="wow fadeInUp" data-wow-delay=".6s">There are many variations of passages of Lorem
-                            Ipsum available, but the majority have suffered alteration in some form.</p>
+                        <h2 class="wow fadeInUp" data-wow-delay=".4s">{{ content.performance_title }}</h2>
+                        <p class="wow fadeInUp" data-wow-delay=".6s">{{ content.performance_subtitle }}</p>
                     </div>
                     <div class="row">
 						<div class="col single-feature wow fadeInUp" data-wow-delay=".6s">
-							<h3 class="wow fadeInUp" data-wow-delay=".6s">Growth of AUD $10,000</h3></br>
+							<p class="wow fadeInUp" data-wow-delay=".6s">Growth of AUD $10,000</p></br>
 						      <!--<canvas id="perfChart" style="position: relative;height:400px;width:100%;max-width:100%"></canvas>-->
 						      <div class="chart-container">
 						      	<canvas id="perfChart" style="position: relative;height:400px;width:100%;max-width:100%"></canvas>
@@ -204,9 +202,8 @@
                 <div class="col-12">
                     <div class="section-title">
                         <h3 class="wow zoomIn" data-wow-delay=".2s">Strategy</h3>
-                        <h2 class="wow fadeInUp" data-wow-delay=".4s">Your Experience Gets Better And Better Over Time.
-                        </h2>
-                        <p class="wow fadeInUp" data-wow-delay=".6s">Our fund is purposed to deliver total returns to our investors. We target companies with potential to deliver significant returns to our portfolio while having strong financials and management to reduce downside risk. We target companies that have:</p>
+                        <h2 class="wow fadeInUp" data-wow-delay=".4s">{{ content.strategy_title }}</h2>
+                        <p class="wow fadeInUp" data-wow-delay=".6s">{{ content.strategy_subtitle }}</p>
                     </div>
                 </div>
             </div>
@@ -215,9 +212,8 @@
                     <!-- Start Single Feature -->
                     <div class="single-feature wow fadeInUp" data-wow-delay=".2s">
                         <i class="lni lni-unlock"></i>
-                        <h3>Barriers to Entry</h3>
-                        <p>It is a long established fact that a reader will be distracted by the readable content of a
-                            page at its layout.</p>
+                        <h3>{{ content.strategy_card_title_1 }}</h3>
+                        <p>{{ content.strategy_card_content_1 }}</p>
                     </div>
                     <!-- End Single Feature -->
                 </div>
@@ -225,9 +221,8 @@
                     <!-- Start Single Feature -->
                     <div class="single-feature wow fadeInUp" data-wow-delay=".4s">
                         <i class="lni lni-dollar"></i>
-                        <h3>Strong Balance Sheets</h3>
-                        <p>It is a long established fact that a reader will be distracted by the readable content of a
-                            page at its layout.</p>
+                        <h3>{{ content.strategy_card_title_2 }}</h3>
+                        <p>{{ content.strategy_card_content_2 }}</p>
                     </div>
                     <!-- End Single Feature -->
                 </div>
@@ -235,9 +230,8 @@
                     <!-- Start Single Feature -->
                     <div class="single-feature wow fadeInUp" data-wow-delay=".6s">
                         <i class="lni lni-stats-up"></i>
-                        <h3>Significant Growth Potential</h3>
-                        <p>It is a long established fact that a reader will be distracted by the readable content of a
-                            page at its layout.</p>
+                        <h3>{{ content.strategy_card_title_3 }}</h3>
+                        <p>{{ content.strategy_card_content_3 }}</p>
                     </div>
                     <!-- End Single Feature -->
                 </div>
@@ -254,31 +248,30 @@
                 <div class="col-12">
                     <div class="section-title">
                         <h3 class="wow zoomIn" data-wow-delay=".2s">The Team</h3>
-                        <h2 class="wow fadeInUp" data-wow-delay=".4s">Meet Ede Capital</h2>
-                        <p class="wow fadeInUp" data-wow-delay=".6s">There are many variations of passages of Lorem
-                            Ipsum available, but the majority have suffered alteration in some form.</p>
+                        <h2 class="wow fadeInUp" data-wow-delay=".4s">{{ content.team_title }}</h2>
+                        <p class="wow fadeInUp" data-wow-delay=".6s">{{ content.team_subtitle }}</p>
                     </div>
                 </div>
             </div>
             <div class="row">
-
-            	 <div class="col-lg-4 col-md-6 col-12">
+            	{% for t in team %}
+            	<div class="col-lg-4 col-md-6 col-12">
                     <!-- Start Single Team -->
                     <div class="single-team wow fadeInUp" data-wow-delay=".2s">
                         <div class="image crop-container">
-                            <img src="https://res.cloudinary.com/cloud-equity/image/upload/v1661495782/LinkedIn/cover_photo_yvx4pw.jpg" style="object-position: 90 0;" alt="#">
+                            <img src="{{ t.profile_image_url }}" style="object-position: 100% 0;" alt="#">
                         </div>
                         <div class="content">
                             <div class="row align-items-center">
                                 <div class="col-lg-7 col-12">
                                     <div class="text">
-                                        <h3><a href="https://www.linkedin.com/in/william-ede-03b4241a2" target="_blank">William Ede</a></h3>
-                                        <h5>Director</h5>
+                                        <h3><a href="{{ t.linkedin_url }}" target="_blank">{{ t.fullname }}</a></h3>
+                                        <h5>{{ t.position }}</h5>
                                     </div>
                                 </div>
                                 <div class="col-lg-5 col-12">
                                     <ul class="social">
-                                        <li><a href="https://www.linkedin.com/in/william-ede-03b4241a2" target="_blank"><i class="lni lni-linkedin-original"></i></a>
+                                        <li><a href="{{ t.linkedin_url }}" target="_blank"><i class="lni lni-linkedin-original"></i></a>
                                         </li>
                                     </ul>
                                 </div>
@@ -287,108 +280,7 @@
                     </div>
                     <!-- End Single Team -->
                 </div>
-
-            	 <div class="col-lg-4 col-md-6 col-12">
-                    <!-- Start Single Team -->
-                    <div class="single-team wow fadeInUp" data-wow-delay=".2s">
-                        <div class="image">
-                            <img src="https://res.cloudinary.com/cloud-equity/image/upload/v1661494312/LinkedIn/1606287062799_wpjaqt.jpg" style="object-position: 100% 0;" alt="#">
-                        </div>
-                        <div class="content">
-                            <div class="row align-items-center">
-                                <div class="col-lg-7 col-12">
-                                    <div class="text">
-                                        <h3><a href="https://www.linkedin.com/in/jason-norval-64389b44/" target="_blank">Jason Norval</a></h3>
-                                        <h5>Advisor</h5>
-                                    </div>
-                                </div>
-                                <div class="col-lg-5 col-12">
-                                    <ul class="social">
-                                        <li><a href="https://www.linkedin.com/in/jason-norval-64389b44/" target="_blank"><i class="lni lni-linkedin-original"></i></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Single Team -->
-                </div>
-
-                <div class="col-lg-4 col-md-6 col-12">
-                    <!-- Start Single Team -->
-                    <div class="single-team wow fadeInUp" data-wow-delay=".2s">
-                        <div class="image">
-                            <img src="https://res.cloudinary.com/cloud-equity/image/upload/v1661494600/LinkedIn/1606279277218_ajcvuz.jpg" style="object-position: 100% 0;" alt="#">
-                        </div>
-                        <div class="content">
-                            <div class="row align-items-center">
-                                <div class="col-lg-7 col-12">
-                                    <div class="text">
-                                        <h3><a href="https://www.linkedin.com/in/orngdar-mongjaay-4993a728/" target="_blank">Orngdar Mongjaay</a></h3>
-                                        <h5>Advisor</h5>
-                                    </div>
-                                </div>
-                                <div class="col-lg-5 col-12">
-                                    <ul class="social">
-                                        <li><a href="https://www.linkedin.com/in/orngdar-mongjaay-4993a728/" target="_blank"><i class="lni lni-linkedin-original"></i></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Single Team -->
-                </div>
-                <div class="col-lg-4 col-md-6 col-12">
-                    <!-- Start Single Team -->
-                    <div class="single-team wow fadeInUp" data-wow-delay=".4s">
-                        <div class="image">
-                            <img src="https://res.cloudinary.com/cloud-equity/image/upload/v1661494730/LinkedIn/1517601414528_ct30v9.jpg" style="object-position: 100% 0;" alt="#">
-                        </div>
-                        <div class="content">
-                            <div class="row align-items-center">
-                                <div class="col-lg-7 col-12">
-                                    <div class="text">
-                                        <h3><a href="https://www.linkedin.com/in/timothy-sylvester-5117b264/" target="_blank">Timothy Sylvester</a></h3>
-                                        <h5>Advisor</h5>
-                                    </div>
-                                </div>
-                                <div class="col-lg-5 col-12">
-                                    <ul class="social">
-                                        <li><a href="https://www.linkedin.com/in/timothy-sylvester-5117b264/" target="_blank"><i class="lni lni-linkedin-original"></i></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Single Team -->
-                </div>
-                <div class="col-lg-4 col-md-6 col-12">
-                    <!-- Start Single Team -->
-                    <div class="single-team wow fadeInUp" data-wow-delay=".6s">
-                        <div class="image">
-                            <img src="https://res.cloudinary.com/cloud-equity/image/upload/v1661494940/LinkedIn/1593070368966_bdcjoa.jpg" style="object-position: 100 0;" alt="#">
-                        </div>
-                        <div class="content">
-                            <div class="row align-items-center">
-                                <div class="col-lg-7 col-12">
-                                    <div class="text">
-                                        <h3><a href="https://www.linkedin.com/in/katrina-griffiths-ba712822/" target="_blank">Katrina Griffiths</a></h3>
-                                        <h5>Corporate Governance</h5>
-                                    </div>
-                                </div>
-                                <div class="col-lg-5 col-12">
-                                    <ul class="social">
-                                        <li><a href="https://www.linkedin.com/in/katrina-griffiths-ba712822/" target="_blank"><i class="lni lni-linkedin-original"></i></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Single Team -->
-                </div>
+                {% endfor %}
             </div>
         </div>
     </section>
@@ -401,17 +293,16 @@
                 <div class="col-12">
                     <div class="section-title">
                         <h3 class="wow zoomIn" data-wow-delay=".2s">Contact Us</h3>
-                        <h2 class="wow fadeInUp" data-wow-delay=".4s">Register interest in the fund.</h2>
-                        <p class="wow fadeInUp" data-wow-delay=".6s">There are many variations of passages of Lorem
-                            Ipsum available, but the majority have suffered alteration in some form.</p>
+                        <h2 class="wow fadeInUp" data-wow-delay=".4s">{{ content.contact_title }}</h2>
+                        <p class="wow fadeInUp" data-wow-delay=".6s">{{ content.contact_subtitle }}</p>
                     </div>
 									    
 					<!-- Start Contact Form Head Area -->
-				    <div class="contact-form-head wow fadeInUp" data-wow-delay=".6s">
+				    <div class="contact-form-head">
 				        <div class="container">
 				            <div class="row align-items-center">
 				                <div class="">
-				                    <div class="form-main">
+				                    <div class="form-main wow fadeInUp" data-wow-delay=".6s">
 				                        <form action="" method="post">
 				                        	{% load widget_tweaks %}
 											{% csrf_token %}
@@ -480,7 +371,7 @@
                                 	<img src="https://res.cloudinary.com/cloud-equity/image/upload/v1660889304/logo-new-ede-capital_rf0lce.png" alt="Ede Capital logo">
                             	</a>
                             </div>
-                            <p class="text-muted" style="font-size: 0.7rem;">Ede Capital is a corporate authorised representative of Point Capital Group AFSL (518031). This website may contain general financial product advice and does not constitute an offer or inducement to enter into a legally binding contract. It does not form part of the terms and conditions for Point Capital Group products or services. The information provided on this website is not intended as, nor is it a substitute for, personal or institutional financial services advice. As this website has been prepared without consideration of any specific client’s investment objectives, financial situation or needs, a financial advisor should be consulted before any investment decision is made. Readers acting on this information without first consulting an adviser do so entirely at their own risk.</p>
+                            <p class="text-muted" style="font-size: 0.7rem;">{{ content.disclaimer }}</p>
                             <ul class="social">
                                 <li><a href="javascript:void(0)"><i class="lni lni-facebook-filled"></i></a></li>
                                 <li><a href="javascript:void(0)"><i class="lni lni-twitter-original"></i></a></li>
@@ -559,7 +450,7 @@
         
     </footer>
     <!--/ End Footer Area -->
-
+    {% endfor %}
     <!-- ========================= scroll-top ========================= -->
     <a href="#" class="scroll-top">
         <i class="lni lni-chevron-up"></i>
