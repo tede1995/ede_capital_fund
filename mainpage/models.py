@@ -11,3 +11,16 @@ class Contact(models.Model):
 
 	def __str__(self):
 		return self.email
+
+class Reports(models.Model):
+	title = models.CharField(max_length=255)
+	summary = models.TextField()
+	download_link = models.URLField(max_length=1000, default='', blank=True)
+	created_on = models.DateTimeField(auto_now_add=True)
+
+	class Meta:
+		ordering = ['-created_on']
+		verbose_name_plural = "Reports"
+
+	def __str__(self):
+		return self.title
