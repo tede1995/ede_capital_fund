@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .forms import ContactForm
-from .models import Reports
+from .models import Reports, Team
 import logging
 
 # Create your views here.
@@ -15,6 +15,8 @@ def index(request):
 
 	report = Reports.objects.all()
 
-	context = {'form': form, 'reports': report}
+	team = Team.objects.all()
+
+	context = {'form': form, 'reports': report, 'team': team}
 
 	return render(request, 'mainpage/index.html', context)
