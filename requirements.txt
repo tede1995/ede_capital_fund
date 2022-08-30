@@ -13,6 +13,7 @@ openpyxl==3.0.10
 python-dotenv==0.20.0
 python-environ==0.4.54
 PyYAML==6.0
+six==1.16.0
 sqlparse==0.4.2
 tablib==3.2.1
 whitenoise==5.3.0
