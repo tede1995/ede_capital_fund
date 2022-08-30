@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.conf.urls import url, include
-from django.urls import path
+from django.urls import path, include
 from mainpage import views as mainpage_views
 
 urlpatterns = [
@@ -23,3 +23,5 @@ urlpatterns = [
     path('jet/', include('jet.urls', 'jet')),  # Django JET URLS
     path('admin/', admin.site.urls),
 ]
+
+handler404 = 'mainpage.views.error_404_view'

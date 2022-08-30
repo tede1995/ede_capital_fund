@@ -22,7 +22,7 @@ class TeamAdmin(admin.ModelAdmin):
     search_fields = ['fullname', 'position']
 
 class ContentAdmin(admin.ModelAdmin):
-    def has_add_permission(self, request, obj=None):
+    def has_add_permission(self):
         return True #Change to False once Content model is created in production.
 
 admin.site.register(Contact, ContactAdmin)

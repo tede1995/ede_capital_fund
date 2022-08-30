@@ -1,7 +1,3 @@
-/*
-Template Name: Appvilla - Creative Landing Page HTML Template.
-Author: GrayGrids
-*/
 
 (function () {
     //===== Prealoder

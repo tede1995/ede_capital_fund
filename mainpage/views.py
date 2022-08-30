@@ -33,3 +33,7 @@ def index(request):
 def success_view(request):
 
 	return render(request, 'mainpage/success.html')
+
+def error_404_view(request, exception):
+   
+    return render(request, '404.html')
