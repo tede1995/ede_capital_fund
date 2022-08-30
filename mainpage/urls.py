@@ -16,10 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.conf.urls import url, include
 from django.urls import path
-from mainpage import views as mainpage_views
+from . import views as mainpage_views
 
 urlpatterns = [
-    path('', include('mainpage.urls')),
-    path('jet/', include('jet.urls', 'jet')),  # Django JET URLS
-    path('admin/', admin.site.urls),
+    path('', mainpage_views.index, name='index'),
+    path('success/', mainpage_views.success_view, name='success'),
 ]

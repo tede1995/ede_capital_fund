@@ -45,6 +45,7 @@ p {
   padding: 0;
   font-size: 15px;
   line-height: 24px;
+  font-weight: 200;
 }
 
 * {
@@ -1821,6 +1822,7 @@ ol {
 
 .navbar-nav .nav-item a {
   font-size: 15px;
+  font-weight: 300 !important;
   color: #fff;
   -webkit-transition: all 0.3s ease-out 0s;
   transition: all 0.3s ease-out 0s;
@@ -1836,6 +1838,11 @@ ol {
   transition: all 0.3s ease-out 0s;
   position: relative;
   text-transform: capitalize;
+}
+
+.navbar-nav .nav-item a:hover {
+  font-weight: 600 !important;
+  width: 100%;
 }
 
 .navbar-nav .nav-item a::after {
@@ -2022,7 +2029,6 @@ ol {
 @media (max-width: 767px) {
   .hero-area {
     padding: 120px 0 50px 0;
-    /*padding-top: 200px;*/
   }
 }
 
@@ -2047,7 +2053,7 @@ ol {
   position: relative;
   z-index: 1;
   text-align: left;
-  /*padding-top: 100px;*/
+  padding-top: 100px;
 }
 
 .hero-area .hero-content h1 {
@@ -2206,7 +2212,7 @@ ol {
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .hero-area .hero-content {
     text-align: center;
-    /*padding: 200px;*/
+    padding: 0px;
   }
   .hero-area .hero-content h1 {
     font-size: 30px;
@@ -2220,7 +2226,7 @@ ol {
 
 @media (max-width: 767px) {
   .hero-area .hero-content {
-    padding: 0 10px;
+    padding: 100 10px;
     text-align: center;
   }
   .hero-area .hero-content h1 {
@@ -2239,6 +2245,7 @@ ol {
   }
   .hero-area .hero-content .button .btn:last-child {
     margin: 0;
+    width: 200px;
   }
 }
 
@@ -2380,7 +2387,7 @@ ol {
 }
 
 .features .single-feature {
-  min-height: 300px;
+  min-height: 250px;
   text-align: left;
   padding: 35px;
   background-color: #fff;
@@ -2453,6 +2460,8 @@ ol {
     padding: 0px 0px 0px;
   }
 }
+
+
 
 
 /*======================================
@@ -3941,6 +3950,7 @@ blockquote span {
   padding: 25px 30px 30px 30px;
   border: 1px solid #eee;
   border-radius: 0 0 10px 10px;
+  background-color: #fff;
 }
 
 .team .single-team .text h3 a {

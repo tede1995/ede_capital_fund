@@ -11,7 +11,11 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
+from dotenv import load_dotenv
+load_dotenv()
+
 import os
+import environ
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -131,7 +135,28 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# Admin Settings #
+# Initialise environment 
+
+variablesenv = environ.Env()
+environ.Env.read_env()
+
+# Email Settings
+
+CONTACT_EMAIL = 'timothycgede@gmail.com' # Alter to Ede Capital email on production
+ADMIN_EMAILS = ['timothycgede@gmail.com', ] # Alter to Ede Capital email on production
+
+# Twilio SendGrid API 
+
+SENDGRID_API_KEY = os.environ.get('SENDGRID_API_KEY')
+
+EMAIL_HOST = 'smtp.sendgrid.net'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'apikey'
+EMAIL_HOST_PASSWORD = os.environ.get('SENDGRID_API_KEY')
+
+# Admin Settings 
+
 JET_DEFAULT_THEME = 'default'
 JET_THEMES = [
     {
