@@ -1,1 +1,1 @@
-web:gunicorn edecapital.wsgi
+web: gunicorn edecapital.wsgi
