@@ -20,7 +20,7 @@ from mainpage import views as mainpage_views
 
 urlpatterns = [
     path('', include('mainpage.urls')),
-    path('jet/', include('jet.urls', 'jet')),  # Django JET URLS
+    #path('jet/', include('jet.urls', 'jet')),  # Django JET URLS
     path('admin/', admin.site.urls),
 ]
 

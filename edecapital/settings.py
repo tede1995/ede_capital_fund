@@ -36,7 +36,7 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
-    'jet',
+    #'jet',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -130,12 +130,9 @@ USE_TZ = True
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 
-# MAY BE REMOVED
-# this is the static files folder name which you created in django project root folder. This is different from above STATIC_URL. 
-# STATICFILES_DIRS = [
-#    os.path.join(BASE_DIR, 'static')
-# ]
-##
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static')
+]
 
 django_heroku.settings(locals())
 
@@ -168,25 +165,25 @@ EMAIL_HOST_PASSWORD = os.environ.get('SENDGRID_API_KEY')
 
 # Admin Settings 
 
-JET_DEFAULT_THEME = 'default'
-JET_THEMES = [
-    {
-        'theme': 'default', # theme folder name
-        'color': '#081828', # color of the theme's button in user menu
-        'title': 'Default' # theme title
-    },
-    {
-        'theme': 'light-blue',
-        'color': '#5EADDE',
-        'title': 'Light Blue'
-    },
-    {
-        'theme': 'light-gray',
-        'color': '#222',
-        'title': 'Light Gray'
-    }
-]
-JET_SIDE_MENU_COMPACT = True
+#JET_DEFAULT_THEME = 'default'
+#JET_THEMES = [
+#    {
+#        'theme': 'default', # theme folder name
+#        'color': '#081828', # color of the theme's button in user menu
+#        'title': 'Default' # theme title
+#    },
+#    {
+#        'theme': 'light-blue',
+#        'color': '#5EADDE',
+#        'title': 'Light Blue'
+#    },
+#    {
+#        'theme': 'light-gray',
+#        'color': '#222',
+#        'title': 'Light Gray'
+#    }
+#]
+#JET_SIDE_MENU_COMPACT = True
 # Admin Settings #
 
 

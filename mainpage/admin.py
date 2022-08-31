@@ -21,13 +21,9 @@ class TeamAdmin(admin.ModelAdmin):
     list_filter = ("hierarchy",)
     search_fields = ['fullname', 'position']
 
-class ContentAdmin(admin.ModelAdmin):
-    def has_add_permission(self):
-        return True #Change to False once Content model is created in production.
-
 admin.site.register(Contact, ContactAdmin)
 admin.site.register(Reports, ReportAdmin)
 admin.site.register(Team, TeamAdmin)
-admin.site.register(Content, ContentAdmin)
+admin.site.register(Content)
 
 
