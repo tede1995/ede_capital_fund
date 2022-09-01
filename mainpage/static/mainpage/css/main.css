@@ -3927,7 +3927,7 @@ blockquote span {
 
 .team .single-team {
   border-radius: 10px;
-  overflow: hidden;
+  /*overflow: hidden;*/
   margin-top: 30px;
   -webkit-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0s;
   transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0s;
@@ -3951,6 +3951,19 @@ blockquote span {
   border: 1px solid #eee;
   border-radius: 0 0 10px 10px;
   background-color: #fff;
+}
+
+.team .single-team .no-image {
+  min-height: 140px;
+  text-align: left;
+  padding: 35px;
+  background-color: #fff;
+  border-radius: 6px;
+  position: relative;
+  margin-top: 30px;
+  border: 1px solid #eee;
+  -webkit-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0s;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0s;
 }
 
 .team .single-team .text h3 a {

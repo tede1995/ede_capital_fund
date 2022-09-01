@@ -233,9 +233,10 @@
             </div>
             <div class="row">
             	{% for t in team %}
+                {% if t.profile_image_url %}
             	<div class="col-lg-4 col-md-6 col-12">
                     <!-- Start Single Team -->
-                    <div class="single-team wow fadeInUp" data-wow-delay=".2s">
+                    <div class="single-team wow fadeInUp" data-wow-delay=".2s" style="overflow: hidden;">
                         <div class="image crop-container">
                             <img src="{{ t.profile_image_url }}" style="object-position: 100% 0;" alt="#">
                         </div>
@@ -258,6 +259,30 @@
                     </div>
                     <!-- End Single Team -->
                 </div>
+                {% else %}
+                <div class="col-lg-4 col-md-6 col-12">
+                    <!-- Start Single Team -->
+                    <div class="single-team wow fadeInUp" data-wow-delay=".2s">
+                        <div class="no-image">
+                            <div class="row align-items-center">
+                                <div class="col-lg-7 col-12">
+                                    <div class="text">
+                                        <h3><a href="{{ t.linkedin_url }}" target="_blank">{{ t.fullname }}</a></h3>
+                                        <h5>{{ t.position }}</h5>
+                                    </div>
+                                </div>
+                                <div class="col-lg-5 col-12">
+                                    <ul class="social">
+                                        <li><a href="{{ t.linkedin_url }}" target="_blank"><i class="lni lni-linkedin-original" style="font-size: 30px;"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Single Team -->
+                </div>
+                {% endif %}
                 {% endfor %}
             </div>
         </div>
