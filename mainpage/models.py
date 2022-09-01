@@ -65,3 +65,15 @@ class Content(models.Model):
 
 	def __str__(self):
 		return self.website_title
+
+class ChartData(models.Model):
+	month = models.CharField(max_length=150)
+	fund_performance = models.IntegerField(default=0)
+	market_performance = models.IntegerField(default=0)
+
+	class Meta:
+		verbose_name_plural = "Chart Data"
+	
+	def __str__(self):
+		return self.month
+

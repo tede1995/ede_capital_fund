@@ -465,9 +465,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 
     <script type="text/javascript">
-		var xValues = ['May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-		var fundPerformance = [10000, 10150, 11151, 11202];
-		var marketPerformance = [10000, 9048, 9654, 9671];
+		var xValues = {{ labels|safe }}
 
 		window.chartColors = {
 		  red: 'rgb(255, 99, 132)',
@@ -489,14 +487,14 @@
 		      label: "Fund Performance",
 		      backgroundColor: window.chartColors.edeBlue,
 		      borderColor: window.chartColors.edeBlue,
-		      data: fundPerformance,
+		      data: {{ data|safe }},
 		      fill: false,
 		    }, {
 		      label: "ASX All Ords Performance",
 		      fill: false,
 		      backgroundColor: window.chartColors.edeBeige,
 		      borderColor: window.chartColors.edeBeige,
-		      data: marketPerformance,
+		      data: {{ data_2|safe }},
 		    }]
 		  },
 		  options: {

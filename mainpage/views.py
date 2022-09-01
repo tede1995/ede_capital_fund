@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from django.core.mail import send_mail
 from django.shortcuts import render, redirect
 from .forms import ContactForm
-from .models import Reports, Team, Content
+from .models import Reports, Team, Content, ChartData
 import logging
 
 # Create your views here.
@@ -26,7 +26,21 @@ def index(request):
 
 	content = Content.objects.all()
 
-	context = {'form': form, 'reports': report, 'team': team, 'content': content}
+	# Handle Chart Date
+
+	labels = []
+	data = []
+	data_2 = []
+
+	queryset = ChartData.objects.all()[:12]
+	for chart in queryset:
+		labels.append(chart.month)
+		data.append(chart.fund_performance)
+		data_2.append(chart.market_performance)
+
+	# Handle Chart Date
+
+	context = {'form': form, 'reports': report, 'team': team, 'content': content, 'labels': labels, 'data': data, 'data_2': data_2,}
 
 	return render(request, 'mainpage/index.html', context)
 

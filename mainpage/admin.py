@@ -1,6 +1,6 @@
 from django.contrib import admin
 from import_export.admin import ImportExportMixin
-from .models import Contact, Reports, Team, Content
+from .models import Contact, Reports, Team, Content, ChartData
 
 admin.site.site_header  =  "Ede Capital Admin"  
 admin.site.site_title  =  "Ede Capital Admin"
@@ -21,9 +21,13 @@ class TeamAdmin(admin.ModelAdmin):
     list_filter = ("hierarchy",)
     search_fields = ['fullname', 'position']
 
+class ChartAdmin(admin.ModelAdmin):
+    list_display = ('month', 'fund_performance', 'market_performance')
+
 admin.site.register(Contact, ContactAdmin)
 admin.site.register(Reports, ReportAdmin)
 admin.site.register(Team, TeamAdmin)
 admin.site.register(Content)
+admin.site.register(ChartData, ChartAdmin)
 
 
