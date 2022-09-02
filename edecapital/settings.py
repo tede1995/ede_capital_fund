@@ -149,8 +149,8 @@ environ.Env.read_env()
 
 # Email Settings
 
-CONTACT_EMAIL = 'CONTACT_EMAIL' # Alter to Ede Capital email on production
-ADMIN_EMAILS = ['ADMIN_EMAIL', ] # Alter to Ede Capital email on production
+CONTACT_EMAIL = 'william@edecapital.com.au' # Alter to Ede Capital email on production
+ADMIN_EMAILS = ['william@edecapital.com.au', ] # Alter to Ede Capital email on production
 
 # Twilio SendGrid API 
 
