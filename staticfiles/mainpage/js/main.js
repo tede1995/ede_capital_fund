@@ -22,10 +22,10 @@
         var logo = document.querySelector('.navbar-brand img')
         if (window.pageYOffset > sticky) {
           header_navbar.classList.add("sticky");
-          logo.src = 'https://acgoadit.sirv.com/edecapital/ede_capital_logo_full.png';
+          logo.src = 'https://acgoadit.sirv.com/edecapital/ede_capital_logo_full_dark.png';
         } else {
           header_navbar.classList.remove("sticky");
-          logo.src = 'https://acgoadit.sirv.com/edecapital/ede_capital_logo_full_dark.png';
+          logo.src = 'https://acgoadit.sirv.com/edecapital/ede_capital_logo_full.png';
         }
 
         // show or hide the back-top-top button
