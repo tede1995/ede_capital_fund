@@ -22,10 +22,10 @@
         var logo = document.querySelector('.navbar-brand img')
         if (window.pageYOffset > sticky) {
           header_navbar.classList.add("sticky");
-          logo.src = 'https://res.cloudinary.com/cloud-equity/image/upload/v1661151956/ede_capital_logo_full_dark_p5rrmd.png';
+          logo.src = 'https://acgoadit.sirv.com/edecapital/ede_capital_logo_full.png';
         } else {
           header_navbar.classList.remove("sticky");
-          logo.src = 'https://res.cloudinary.com/cloud-equity/image/upload/v1661151753/ede_capital_logo_full_cklnna.png';
+          logo.src = 'https://acgoadit.sirv.com/edecapital/ede_capital_logo_full_dark.png';
         }
 
         // show or hide the back-top-top button
