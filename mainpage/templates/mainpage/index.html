@@ -148,6 +148,7 @@
             </div>
 
             <!-- Carousel Cards Start -->
+            {% if content.show_reports == True %}
 
             <div class="row owl-carousel owl-theme">
             	{% for report in reports %}
@@ -166,6 +167,7 @@
                 {% endfor %}
             </div>
 
+            {% endif %}
             <!-- Carousel Cards Ends -->
 
         </div>

@@ -46,6 +46,7 @@ class Content(models.Model):
 	homepage_subtitle = models.TextField(blank=True)
 	performance_title = models.CharField(max_length=1000, blank=True)
 	performance_subtitle = models.TextField(blank=True)
+	show_reports = models.BooleanField(default=True)
 	strategy_title = models.CharField(max_length=1000, blank=True)
 	strategy_subtitle = models.TextField(blank=True)
 	strategy_card_title_1 = models.CharField(max_length=1000)
